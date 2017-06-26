@@ -16,8 +16,11 @@ if [ -z "$IP" ]; then
   IP="$(hostname -i)"
 fi
 
+if [ -z "$PORT" ]; then
+  PORT="4444"
+fi
 
-phantomjs --webdriver=$IP:4444 ${PHANTOMJS_OPTS} --webdriver-selenium-grid-hub=http://$HUB_PORT_4444_TCP_ADDR:$HUB_PORT_4444_TCP_PORT
+phantomjs --webdriver=$IP:$PORT ${PHANTOMJS_OPTS} --webdriver-selenium-grid-hub=http://$HUB_PORT_4444_TCP_ADDR:$HUB_PORT_4444_TCP_PORT
 
 trap shutdown SIGTERM SIGINT
 wait $NODE_PID
