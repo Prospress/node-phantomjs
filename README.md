@@ -25,13 +25,13 @@ $ docker run -d --link selenium-hub:hub prospress/node-phantomjs
 or with a version:
 
 ```
-$ docker run -d --link selenium-hub:hub prospress/node-phantomjs:3.4.0-bismuth
+$ docker run -d --link selenium-hub:hub prospress/node-phantomjs:3.4.0-dysprosium
 ```
 
 ## Updating the node-base image and pushing to docker hub
 
-* Update the `Dockerfile` with new node base image version i.e. `3.4.0-chromium` (save/commit etc.)
+* Update the `Dockerfile` with new node base image version i.e. `3.4.0-dysprosium` (save/commit etc.)
 * Run Docker
-* From the repository root directory execute `docker build -t prospress/node-phantomjs:3.4.0-chromium ./`. This download the the newer node-base image and rebuild a local image.
+* From the repository root directory execute `docker build -t prospress/node-phantomjs:3.4.0-dysprosium ./`. This download the the newer node-base image and rebuild a local image.
 * Log into docker cloud by executing `docker login`
-* Execute `docker push prospress/node-phantomjs:3.4.0-chromium` to update docker hub.
+* Execute `docker push prospress/node-phantomjs:3.4.0-dysprosium` to update docker hub.

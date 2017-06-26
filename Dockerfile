@@ -1,4 +1,4 @@
-FROM selenium/node-base:3.4.0-chromium
+FROM selenium/node-base:3.4.0-dysprosium
 MAINTAINER Prospress <docker@prospress.com>
 
 USER root
